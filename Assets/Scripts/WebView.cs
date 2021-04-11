@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Web表示機能のスクリプトです。
+//iOS,Androidのみ対応。
 public class WebView : MonoBehaviour
 {
     WebViewObject webViewObject;
@@ -18,6 +20,7 @@ public class WebView : MonoBehaviour
 webViewObject.bitmapRefreshCycle = 1;
 #endif
 
+//今回は実験としてGoogleを入れてます。
         webViewObject.LoadURL("https://www.google.co.jp");
     }
 
