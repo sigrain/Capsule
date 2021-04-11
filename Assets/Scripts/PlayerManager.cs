@@ -6,6 +6,7 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 
+//プレイヤーのオブジェクトを生成するためのスクリプトです。
 public class PlayerManager : Photon.PunBehaviour
 {
     public GameObject PlayerController;
