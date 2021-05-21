@@ -42,4 +42,12 @@ public class PlayerManager : Photon.PunBehaviour
             _uiGo.SendMessage("SetTarget", this, SendMessageOptions.RequireReceiver);
         }
     }
+
+    void Update()
+    {
+        if (Input.GetKey(KeyCode.E))
+        {
+            Cursor.lockState = CursorLockMode.None;
+        }
+    }
 }

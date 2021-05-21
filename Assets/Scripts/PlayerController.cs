@@ -14,6 +14,8 @@ public class PlayerController : MonoBehaviour
 
     Rigidbody rb;
 
+    bool esc;
+
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -21,9 +23,23 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        Look();
-        Move();
-        Jump();
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            esc = !esc;
+        }
+
+        if (esc)
+        {
+            Cursor.lockState = CursorLockMode.None;
+            float mouseSensitivity = 0;
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Look();
+            Move();
+            Jump();
+        }
     }
 
     void Look()

@@ -33,5 +33,7 @@ public class Launcher : Photon.PunBehaviour
     {
         PhotonNetwork.LoadLevel("Room");
         Debug.Log("Entered to Room");
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = true;
     }
 }
