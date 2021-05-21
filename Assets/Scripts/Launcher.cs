@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+//UnityをPhotonに繋げるためのスクリプトです。
 public class Launcher : Photon.PunBehaviour
 {
     string _gameVersion = "test";

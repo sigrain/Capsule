@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//プレイヤー名をアバターの上に表示させる機能のスクリプトです。
 public class PlayerUIScript : MonoBehaviour
 {
     public Vector3 ScreenOffset = new Vector3(0f, 30f, 0f);

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//プレイヤー名入力欄のスクリプトです。
 public class NameInputFieldScript : MonoBehaviour
 {
     static string playerNamePrefKey = "PlayerName";

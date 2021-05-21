@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//お絵描き機能を搭載したキャンパスのスクリプトです。
 public class PaintController : MonoBehaviour
 {
     public Camera camera;
@@ -11,6 +12,7 @@ public class PaintController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+    //キャンパスのマテリアルの情報とピクセルを取得
         Texture2D mainTexture = (Texture2D)GetComponent<Renderer>().material.mainTexture;
         Color[] pixels = mainTexture.GetPixels();
 
@@ -21,6 +23,7 @@ public class PaintController : MonoBehaviour
         drawTexture.filterMode = FilterMode.Point;
     }
 
+//ペイントの太さと色
     public void Draw(Vector2 p)
     {
         for(int x = 0; x < 256; x++)
@@ -35,6 +38,7 @@ public class PaintController : MonoBehaviour
         }
     }
 
+//消しゴムの太さと色（白）
     public void Clear(Vector2 p)
     {
         for(int x = 0; x < 256; x++)
@@ -52,6 +56,10 @@ public class PaintController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+    
+    //FPSの銃でよく用いられるRayを使います。
+    //マウスの先にある場所に色が付く感じです。
+    
         if (Input.GetMouseButton(0))
         {
             RaycastHit hit;

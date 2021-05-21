@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Photon上にあるプレファブを整理するためのスクリプトです。
+//現在、バグがあり開発中。
 public class MyPhotonPool : Photon.PunBehaviour, IPunPrefabPool
 {
     public List<GameObject> PrefabList;

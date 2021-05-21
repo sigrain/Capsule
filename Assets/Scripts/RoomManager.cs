@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+//ホームを生成するためのスクリプトです。
 public class RoomManager : Photon.PunBehaviour
 {
     public GameObject PlayerManager;
